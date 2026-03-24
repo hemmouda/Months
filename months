@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# A functioning 24 year old man.
+# hemmouda.com/months
+# 2026.03
+
+list () {
+    echo "      English   │ Arabic │ German    │ French              │███│ Islamic"
+    echo "────┼───────────┼────────┼───────────┼───────────┼─────────┼███┼──────────────"
+    echo " 01 │ January   │ يناير  │ Januar    │ Janvier   │ 31 days │███│ محرم"
+    echo " 02 │ February  │ فبراير │ Februar   │ Février   │ 28 days │███│ صفر"
+    echo " 03 │ March     │ مارس   │ März      │ Mars      │ 31 days │███│ ربيع الأول"
+    echo " 04 │ April     │ أبريل  │ April     │ Avril     │ 30 days │███│ ربيع الثاني"
+    echo " 05 │ May       │ مايو   │ Mai       │ Mai       │ 31 days │███│ جمادى الأولى"
+    echo " 06 │ June      │ يونيو  │ Juni      │ Juin      │ 30 days │███│ جمادى الثانية"
+    echo " 07 │ July      │ يوليو  │ Juli      │ Juillet   │ 31 days │███│ رجب"
+    echo " 08 │ August    │ أغسطس  │ August    │ Août      │ 31 days │███│ شعبان"
+    echo " 09 │ September │ سبتمبر │ September │ Septembre │ 30 days │███│ رمضان"
+    echo " 10 │ October   │ أكتوبر │ Oktober   │ Octobre   │ 31 days │███│ شوال"
+    echo " 11 │ November  │ نوفمبر │ November  │ Novembre  │ 30 days │███│ ذو القعدة"
+    echo " 12 │ December  │ ديسمبر │ Dezember  │ Décembre  │ 31 days │███│ ذو الحجة"
+}
+
+if [ $# -gt 0 ]; then
+    # Always print header
+    list | head -n 2
+    list | head -n $(($1 + 2)) | tail -n 1
+else
+    list
+fi
